@@ -73,11 +73,17 @@ body {
   background: linear-gradient(90deg, #6020B0, #FA41CC);
 }
 
+.wrap {
+  overflow: hidden;
+}
+
 .header {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   z-index: 99;
   background: white;
+  position: fixed;
+  width: 100vw;
 }
 
 .header__container {
@@ -256,6 +262,7 @@ body {
 }
 
 .main {
+  padding-top: 60px;
   position: relative;
   overflow: hidden;
 }
@@ -659,7 +666,7 @@ body {
 }
 
 .works__container .swiper-container .swiper-wrapper .swiper-contents-text {
-  background: coral;
+  background: white;
   height: 197px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -852,6 +859,13 @@ body {
 レスポンシブ
 --------------------*/
 @media (max-width: 1100px) {
+  .header__container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .header__container--menu ul li {
+    margin-right: 20px;
+  }
   .main__container {
     display: block;
   }
@@ -882,7 +896,7 @@ body {
   }
   .features__container--article .features__contents {
     width: 100vw;
-    padding: 0 15px;
+    padding: 0 50px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -915,6 +929,15 @@ body {
 }
 
 @media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+  .header__container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
   .header__container--logo img {
     width: 30px;
     height: 30px;
@@ -954,9 +977,12 @@ body {
   }
   .features__container--article .features__contents img {
     margin-bottom: 30px;
+    width: 90%;
+    height: 90%;
   }
   .features__container--article .features__contents--text {
-    width: 100%;
+    width: 90%;
+    text-align: left;
   }
   .features__container--article .features__contents--text .contents-title {
     font-size: 18px;
@@ -1000,6 +1026,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .blog__container--article .blog-contents {
     margin-right: 0;

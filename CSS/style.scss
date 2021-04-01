@@ -88,11 +88,17 @@ body{
 
 }
 
+.wrap{
+  overflow: hidden;
+}
+
 //ヘッダー
 .header{
   @include shadow();
   z-index:99;
   background: white;
+  position: fixed;
+  width: 100vw;
   &__container{
     max-width: 1022px;
     display: flex;
@@ -228,6 +234,7 @@ body{
 
 //メインFV
 .main{
+  padding-top: 60px;
   position: relative;
   overflow: hidden;
   &__container{
@@ -501,7 +508,7 @@ body{
           transition: all 0.3s;
         }
         &-text{
-          background: coral;
+          background:white;
           height: 197px;
           display: flex;
           flex-direction: column;
@@ -650,6 +657,19 @@ body{
 //pc-タブレット
 @media(max-width:1100px){
 
+  .header{
+    &__container{
+      padding-left: 30px;
+      padding-right: 30px;
+      &--menu{
+        ul{
+          li{
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
 
   //メインFV
   .main{
@@ -692,6 +712,7 @@ body{
   //特徴
   .features{
     &__container{
+
       &--article{
         .features{
           &:nth-of-type(2){
@@ -702,7 +723,7 @@ body{
           }
           &__contents{
             width: 100vw;
-            padding: 0 15px;
+            padding: 0 50px;
             justify-content: center;
             img{
               margin-right: 30px;
@@ -762,9 +783,16 @@ body{
 //タブレット-スマホ
 @media(max-width:768px){
 
+  .title{
+    font-size: 28px;
+  }
+
   //ヘッダー
   .header{
     &__container{
+      justify-content: space-around;
+      padding-top: 10px;
+      padding-bottom: 10px;
       &--logo{
         img{
           width: 30px;
@@ -818,14 +846,18 @@ body{
             flex-direction: column;
             img{
               margin-bottom: 30px;
+              width: 90%;
+              height: 90%;
             }
             &--text{
-              width: 100%;
+              width: 90%;
+              text-align: left;
               .contents-title{
                 font-size: 18px;
                 background: linear-gradient(white 0%, white 60%,#7996e7 60%, #7996e7 100%);
                 display: inline;
                 padding-bottom: 0;
+                
               }
               .contents-desc{
                 padding-top: 30px;
@@ -883,6 +915,7 @@ body{
     &__container{
       &--article{
         flex-direction: column;
+        align-items: center;
         .blog-contents{
           margin-right: 0;
           margin-bottom: 30px;
