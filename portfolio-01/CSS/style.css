@@ -79,7 +79,7 @@ body {
 
 .gg-mail,
 .gg-mail::after {
-  display: block;
+  display: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 14px;
@@ -193,10 +193,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.header__container--contact button .gg-mail {
-  display: none;
 }
 
 .header__container--contact .hamburger-menu {
@@ -1097,22 +1093,22 @@ body {
 }
 
 @media (max-width: 400px) {
+  .gg-mail,
+  .gg-mail::after {
+    display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 14px;
+    border: 2px solid;
+  }
   .header__container--contact .sp-button {
     width: 40px;
   }
   .header__container--contact .sp-button a {
     font-size: 10px;
   }
-  .header__container--contact .sp-button .sp-mode {
+  .header__container--contact .sp-button p {
     display: none;
-  }
-  .header__container--contact .sp-button .gg-mail {
-    display: block;
-  }
-  .header__container--contact .hamburger-menu {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
   }
 }
 /*# sourceMappingURL=style.css.map */

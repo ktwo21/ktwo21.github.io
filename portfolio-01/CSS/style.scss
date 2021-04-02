@@ -94,7 +94,7 @@ body{
 
 .gg-mail,
 .gg-mail::after {
-    display: block;
+    display: none;
     box-sizing: border-box;
     height: 14px;
     border: 2px solid
@@ -168,9 +168,6 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-        .gg-mail{
-          display: none;
-        }
       }
 
       //ハンバーガーメニュー
@@ -990,6 +987,14 @@ body{
 }
 
 @media(max-width:400px){
+
+  .gg-mail,
+  .gg-mail::after {
+    display: block;
+    box-sizing: border-box;
+    height: 14px;
+    border: 2px solid
+  }
    //ヘッダー
    .header{
     &__container{
@@ -999,15 +1004,9 @@ body{
           a{
             font-size: 10px;
           }
-          .sp-mode{
+          p{
             display: none;
           }
-          .gg-mail{
-            display: block;
-          }
-        }
-        .hamburger-menu{
-          display: inline-flex;
         }
       }
     }
