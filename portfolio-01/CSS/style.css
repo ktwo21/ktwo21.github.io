@@ -195,6 +195,13 @@ body {
           align-items: center;
 }
 
+<<<<<<< HEAD
+=======
+.header__container--contact button .gg-mail {
+  display: none !important;
+}
+
+>>>>>>> 82a9a9b753204f458dd66d0360fab66608e1507d
 .header__container--contact .hamburger-menu {
   height: 47px;
   width: 47px;
@@ -1107,8 +1114,22 @@ body {
   .header__container--contact .sp-button a {
     font-size: 10px;
   }
+<<<<<<< HEAD
   .header__container--contact .sp-button p {
     display: none;
   }
+=======
+  .header__container--contact .sp-button .sp-mode {
+    display: none !important;
+  }
+  .header__container--contact .sp-button .gg-mail {
+    display: block !importnat;
+  }
+  .header__container--contact .hamburger-menu {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+>>>>>>> 82a9a9b753204f458dd66d0360fab66608e1507d
 }
 /*# sourceMappingURL=style.css.map */
