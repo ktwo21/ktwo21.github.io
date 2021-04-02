@@ -196,7 +196,7 @@ body {
 }
 
 .header__container--contact button .gg-mail {
-  display: none;
+  display: none !important;
 }
 
 .header__container--contact .hamburger-menu {
@@ -1104,10 +1104,10 @@ body {
     font-size: 10px;
   }
   .header__container--contact .sp-button .sp-mode {
-    display: none;
+    display: none !important;
   }
   .header__container--contact .sp-button .gg-mail {
-    display: block;
+    display: block !importnat;
   }
   .header__container--contact .hamburger-menu {
     display: -webkit-inline-box;
