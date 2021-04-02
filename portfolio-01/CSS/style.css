@@ -77,6 +77,35 @@ body {
   overflow: hidden;
 }
 
+.gg-mail,
+.gg-mail::after {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 14px;
+  border: 2px solid;
+}
+
+.gg-mail {
+  overflow: hidden;
+  -webkit-transform: scale(var(--ggs, 1));
+          transform: scale(var(--ggs, 1));
+  position: relative;
+  width: 18px;
+  border-radius: 2px;
+}
+
+.gg-mail::after {
+  content: "";
+  position: absolute;
+  border-radius: 3px;
+  width: 14px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 3px;
+  left: 0;
+}
+
 .header {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
@@ -152,6 +181,22 @@ body {
       -ms-flex-align: center;
           align-items: center;
   /* ×に変換する （クラス付与ver）*/
+}
+
+.header__container--contact button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__container--contact button .gg-mail {
+  display: none;
 }
 
 .header__container--contact .hamburger-menu {
@@ -950,10 +995,10 @@ body {
     display: none;
   }
   .header__container--contact .sp-button {
-    width: 110px;
+    width: 100px;
   }
   .header__container--contact .sp-button a {
-    font-size: 12px;
+    font-size: 10px;
   }
   .header__container--contact .hamburger-menu {
     display: -webkit-inline-box;
@@ -1048,6 +1093,26 @@ body {
   }
   .footer__container small {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header__container--contact .sp-button {
+    width: 40px;
+  }
+  .header__container--contact .sp-button a {
+    font-size: 10px;
+  }
+  .header__container--contact .sp-button .sp-mode {
+    display: none;
+  }
+  .header__container--contact .sp-button .gg-mail {
+    display: block;
+  }
+  .header__container--contact .hamburger-menu {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
   }
 }
 /*# sourceMappingURL=style.css.map */

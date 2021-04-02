@@ -92,6 +92,32 @@ body{
   overflow: hidden;
 }
 
+.gg-mail,
+.gg-mail::after {
+    display: block;
+    box-sizing: border-box;
+    height: 14px;
+    border: 2px solid
+}
+
+.gg-mail {
+    overflow: hidden;
+    transform: scale(var(--ggs,1));
+    position: relative;
+    width: 18px;
+    border-radius: 2px
+}
+
+.gg-mail::after {
+    content: "";
+    position: absolute;
+    border-radius: 3px;
+    width: 14px;
+    transform: rotate(-45deg);
+    bottom: 3px;
+    left: 0
+}
+
 //ヘッダー
 .header{
   @include shadow();
@@ -138,6 +164,14 @@ body{
     &--contact{
       display: flex;
       align-items: center;
+      button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .gg-mail{
+          display: none;
+        }
+      }
 
       //ハンバーガーメニュー
       .hamburger-menu{
@@ -808,9 +842,9 @@ body{
       }
       &--contact{
         .sp-button{
-          width: 110px;
+          width: 100px;
           a{
-            font-size: 12px;
+            font-size: 10px;
           }
         }
         .hamburger-menu{
@@ -952,5 +986,30 @@ body{
       }
     }
 
+  }
+}
+
+@media(max-width:400px){
+   //ヘッダー
+   .header{
+    &__container{
+      &--contact{
+        .sp-button{
+          width: 40px;
+          a{
+            font-size: 10px;
+          }
+          .sp-mode{
+            display: none;
+          }
+          .gg-mail{
+            display: block;
+          }
+        }
+        .hamburger-menu{
+          display: inline-flex;
+        }
+      }
+    }
   }
 }
