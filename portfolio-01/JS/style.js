@@ -64,26 +64,13 @@ $(function(){
       $('#form #checkbox').prop('checked') === true
     ){
       $submit.prop('disabled',false);
+      $('.submit-error').css('visibility','hidden');
     }else{
-      $submit.prop('disabled',true);   
+      $submit.prop('disabled',true); 
+      $('.submit-error').css('visibility','visible');   
     }
   });
 
-  //ボタンを押されたときの発火
-  $('#submit').on('click',function(){
-    if(
-      $('#form input[type="text"]').val() !== "" &&
-      $('#form input[type="email"]').val() !== "" &&
-      $('#form textarea').val() !== "" &&
-      $('#form #checkbox').prop('checked') === true
-    ){
-      $submit.prop('disabled',false);
-      $('.submit-error').css('visibility','hidden');
-    }else{
-      $submit.prop('disabled',true);   
-      $('.submit-error').css('visibility','visible');  
-    }
-  })
 
   //formをGformに遷移させない記述
   $('#form').submit(function (event) {
@@ -96,7 +83,7 @@ $(function(){
       statusCode: {
         0: function () {
           $(".end-message").slideDown();
-          $(".button").fadeOut();
+          $(".form-button").fadeOut();
           //window.location.href = "thanks.html";
         },
         200: function () {
@@ -129,7 +116,6 @@ $(function(){
     // バーガーメニューをもとに戻す
     $('body.noScroll').removeClass('noScroll');
     // スクロール防止を消す
-    console.log('hei');
     $('.hamburger__background').fadeOut();
   });
 })
