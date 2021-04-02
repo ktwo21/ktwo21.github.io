@@ -122,12 +122,14 @@ $(function(){
   
   /*aタグ要素に対して*/
   
-  $('a').click(function(){
-    $('.hamburger-menu').removeClass('open');
+  $('a,.hamburger__background').on('click',function(){
+    $('.hamburger__nav.open').removeClass('open');
     // リンクをクリックしたらメニューを消す
     $('.hamburger-menu.close').removeClass('close');
     // バーガーメニューをもとに戻す
-    $('body.noScroll').removeClass('noScroll')
+    $('body.noScroll').removeClass('noScroll');
     // スクロール防止を消す
-  })
+    console.log('hei');
+    $('.hamburger__background').fadeOut();
+  });
 })

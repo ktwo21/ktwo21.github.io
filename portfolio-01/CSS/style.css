@@ -109,7 +109,7 @@ body {
 .header {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  z-index: 99;
+  z-index: 40;
   background: white;
   position: fixed;
   width: 100vw;
@@ -260,7 +260,7 @@ body {
           transform: translateX(100%);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  z-index: 1;
+  z-index: 30;
   position: fixed;
 }
 
@@ -974,10 +974,13 @@ body {
     font-size: 28px;
   }
   .header__container {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .header__container--logo img {
     width: 30px;
@@ -1111,3 +1114,4 @@ body {
     display: none;
   }
 }
+/*# sourceMappingURL=style.css.map */
