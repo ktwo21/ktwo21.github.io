@@ -821,18 +821,35 @@ body {
   height: 170px;
 }
 
-.contact__container form input[type="checkbox"] {
-  width: 20px;
-  margin: 0 auto;
-  display: inline-block;
+.contact__container form .checkbox-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.contact__container form span {
+.contact__container form .checkbox-wrapper input[type="checkbox"] {
+  width: 20px;
+  margin: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.contact__container form .checkbox-wrapper span {
   font-size: 16px;
   font-weight: 700;
-  line-height: 1.75;
+  line-height: 1.25;
   letter-spacing: 0em;
   margin-left: 10px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .contact__container form .submit-error {

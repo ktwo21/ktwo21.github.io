@@ -615,18 +615,23 @@ body{
         height: 170px;
       }
 
-    
+    .checkbox-wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: center;
       input[type="checkbox"]{
         width: 20px;
-        margin: 0 auto;
-        display: inline-block;
+        margin: 0;
+        display: inline-flex;
     
       }
       span{
-        @include f_around(16, 28, 700, 0);
+        @include f_around(16, 20, 700, 0);
         margin-left: 10px;
+        display: inline-flex;
 
       }
+    }
 
       .submit-error{
         color: crimson;
