@@ -71,8 +71,7 @@ body{
     transform: translate(-50%,-50%);
     width: 100%;
     height: 100%;
-    // color: white;
-    // @include f_around(14, 20, 700, 0);
+    z-index: 99;
   }
   &::after{
     content: '';
