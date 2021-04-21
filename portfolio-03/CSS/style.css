@@ -99,6 +99,10 @@ li {
   list-style: none;
 }
 
+.wrap {
+  overflow: hidden;
+}
+
 #header {
   text-transform: uppercase;
   margin: 0 calc(50% - 50vw);

@@ -60,6 +60,10 @@ section {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  border: none;
+  color: #ffffff;
+  font-style: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 
 .read_more a {
@@ -93,6 +97,10 @@ p {
 
 li {
   list-style: none;
+}
+
+.wrap {
+  overflow: hidden;
 }
 
 #header {

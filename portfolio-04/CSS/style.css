@@ -132,6 +132,10 @@ img {
   margin-left: 100px;
 }
 
+.wrap {
+  overflow: hidden;
+}
+
 #header .headerImg {
   width: 100vw;
   height: 100vh;
