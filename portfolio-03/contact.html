@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>クリスタ コーディング課題③</title>
+  <meta name="description" content="クリスタチャレンジ">
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/reset.css">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/media.css">
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <header id="header">
+    <div class="header__background-contact">
+    </div>
+    <div class="header__background--black-about"></div>
+    <div class="header__background--gray"></div>
+    
+      <!-- NAV -->
+          <div class="header__nav">
+            <div class="header__nav--logo">
+              <a href="index.html"><img src="images/site-logo@2x.png" alt="サイトロゴ"></a>
+            </div>
+            <div class="header__nav--menu">
+              <span class="header__nav--menu-bar"></span>
+              <p>MENU</p>
+            </div>
+          </div>
+    
+          <div class="header__hamburger">
+            <a href="index.html"><img src="images/site-icon@2x.png" alt="サイトアイコン"></a>
+            <div class="header__hamburger--menu">
+              <nav>
+                <ul>
+                  <li><a href="/index.html#about">ABOUT US</a></li>
+                  <li><a href="/index.html#works">WORKS</a></li>
+                  <li><a href="/index.html#culture">CULTURE</a></li>
+                  <li><a href="/index.html#topics">TOPICS</a></li>
+                  <li><a href="/index.html#contact">CONTACT</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+    
+    <div class="header__title-about">
+      <h1 class="header__title--maintitle">
+        contact
+      </h1>
+      <p class="header__title--subtitle">
+        お問い合わせ
+      </p>
+    </div>
+    
+  </header>
+
+
+  <!-- FORM -->
+  <section id="form">
+
+    <form class="form__container" action="#">
+      
+      <div class="form__container--text">
+        <p>ご依頼やご相談についてのご質問やご要望がございましたら、下記フォームよりお気軽にお問い合わせください。送付いただいた内容を確認の上、担当者からご連絡させていただきます。</p>
+      </div>
+
+      <div class="form__container--input foo">
+        <p>お問い合わせ種別<span 
+        class="mandatory">必須</span></p>
+        <label>
+          <input type="radio" name="seisaku">制作依頼
+        </label>
+        <label>
+          <input type="radio" name="saiyou">採用
+        </label>
+        <label>
+          <input type="radio" name="ir">IR
+        </label>
+        <label>
+          <input type="radio" name="other">その他
+        </label>
+      </div>
+
+      <div class="from__container--input foo">
+        <p>会社名・団体名</p>
+        <input type="text" name="company" >
+      </div>
+
+      <div class="from__container--input foo">
+        <p>お名前<span class="mandatory">必須</span></p>
+        <input type="text" name="name" >
+      </div>
+
+      <div class="from__container--input foo">
+        <p>メールアドレス<span class="mandatory">必須</span></p>
+        <input type="email" name="email" >
+      </div>
+
+      <div class="from__container--input foo">
+        <p>電話番号</p>
+        <input type="tel" name="tel" >
+      </div>
+
+      <div class="from__container--input foo">
+        <p>お問い合わせ内容<span class="mandatory">必須</span></p>
+        <textarea name="contact" cols="30" rows="10"></textarea>
+      </div>
+
+      <div class="from__container--input foo">
+        <p>PRIVACY POLICY</p>
+        <textarea name="policy" cols="30" rows="10">
+個人情報保護方針
+株式会社DIGSMILE（以下、当社）では、個人情報の重要性を認識し、以下の基準に従って、適切な管理、保護に努めます。
+
+1.個人情報の収集、利用
+当社では、お客様との取引、サービスの提供のために個人情報を適法に収集し、収集した目的の範囲内で、個人情報を利用いたします。
+
+2.個人情報の第三者への開示と提供
+収集したお客様の個人情報は、法的な要請等によらない限り、お客様の承諾を得ない第三者に対して提供・開示はいたしません。
+業務の都合上、業務委託先に個人情報を提供する場合は、機密保持契約等によって業務委託先に個人情報保護を義務付けるとともに、業務委託先が適切に個人情報を取り扱うように管理いたします。
+
+3.個人情報の保護
+当社では、個人情報の紛失、破壊、改ざん、不正アクセス、および漏えい等を防止するため、適切な対策を行います。
+
+4.法令および関連規範の遵守
+当社は、個人情報の取り扱いに関して、個人情報保護法をはじめとする個人情報に関する法令および関連する規範を遵守します。
+
+5.個人情報の開示・訂正・削除
+当社では、個人情報の開示・訂正・削除等の依頼があった場合、情報提供者本人であることを確認の上、すみやかに対応いたします。
+
+法令や当社方針により、プライバシー・ポリシーを予告なく改訂することがあります。
+
+お問い合わせ窓口
+当社の個人情報の取扱いに関するお問い合わせは下記までご連絡お願いいたします。
+株式会社ファイアープレイス
+044-589-4333
+        </textarea>
+      </div>
+
+      <div class="from__container--input foo center">
+        <label>
+          <input type="checkbox">個人情報の取り扱いについて同意のうえ送信します。
+        </label>
+      </div>
+
+      <div class="from__container--input center">
+        <button class="read_more center" type="submit">送信</button>
+      </div>
+
+      
+
+
+
+
+
+
+    </form>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <small>&copy;2018 DIGSMILE INC.</small>
+  </footer>
+  
+  <!-- jQuery -->
+  <script src="JS/jquery.min.js"></script>
+  <script src="JS/style.js"></script>
+</body>
+</html>

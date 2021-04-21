@@ -1,0 +1,794 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body * {
+  color: #171717;
+  font-family: 'Noto Serif', serif;
+  font-family: 'Noto Serif JP', serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .4s ease;
+  -webkit-transition: opacity .4s ease;
+}
+
+body.fadeout::after {
+  opacity: 1;
+}
+
+section {
+  padding-top: 100px;
+  padding-bottom: 70px;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+h2 {
+  font-size: 6.0rem;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 0.4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #282F35;
+  margin-bottom: 80px;
+}
+
+h2 .bar {
+  width: 200px;
+  height: 5px;
+  background-color: #171717;
+  display: inline-block;
+  margin-left: 33px;
+}
+
+.end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+h4 {
+  font-size: 9.0rem;
+  font-weight: bold;
+  line-height: 0.32222;
+  opacity: 0.05;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.875;
+  font-weight: normal;
+}
+
+small {
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 2.14286;
+}
+
+button {
+  background-color: #F7D43F;
+  width: 235px;
+  height: 59px;
+  border: none;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 6px #171717;
+          box-shadow: 0 0 6px #171717;
+  display: block;
+  margin: 0 auto 70px;
+}
+
+button a {
+  font-family: 'Noto Serif', serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1.875;
+}
+
+button:hover {
+  background-color: white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+a {
+  text-decoration: none;
+  color: #171717;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.right {
+  text-align: end;
+}
+
+.white {
+  color: white;
+}
+
+.side {
+  margin-left: 100px;
+}
+
+#header .headerImg {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#header .headerNav {
+  padding: 0 120px;
+  width: 100vw;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  z-index: 100;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#header .headerNav.withColor {
+  background-color: #282F35;
+}
+
+#header .headerNav .navTitle {
+  font-size: 2.6rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#header .headerNav .nav {
+  width: 349px;
+}
+
+#header .headerNav .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#header .headerNav .nav ul li > a {
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-style: italic;
+  color: white;
+}
+
+#header .title {
+  position: relative;
+  top: 50%;
+  padding-left: 120px;
+}
+
+#header .title h1 {
+  font-size: 7.0rem;
+  font-weight: bold;
+  line-height: 0.71429;
+  color: white;
+  margin-bottom: 23px;
+}
+
+#header .title .headerSubTitle {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.25;
+  padding-left: 40px;
+}
+
+#concept h2 {
+  margin-bottom: 70px;
+}
+
+#concept h3 {
+  width: 600px;
+  font-size: 3.0rem;
+  font-weight: bold;
+  line-height: 1.66667;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+#concept .conceptContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 70px;
+}
+
+#concept .conceptContent p {
+  width: 440px;
+  margin-right: 120px;
+}
+
+#concept .conceptContent img {
+  width: 440px;
+}
+
+#works {
+  background: url(../img/works-bgi@2x.jpg) no-repeat center/cover;
+}
+
+#works .bar {
+  background-color: white;
+}
+
+#works .worksContents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 80px;
+}
+
+#works .worksContents .works {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 334px;
+  background-color: white;
+  margin-right: 20px;
+}
+
+#works .worksContents .works:last-of-type {
+  margin-right: 0;
+}
+
+#works .worksContents .works img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#works .worksContents .works p {
+  width: 100%;
+  padding: 20px 25px;
+}
+
+#service .serviceContents {
+  margin: 0 calc(50% - 50vw) 70px;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#service .serviceContents .service {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+
+#service .serviceContents .service img {
+  width: 100%;
+}
+
+#service .serviceContents .service::after {
+  content: "";
+  background-color: rgba(40, 47, 53, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#service .serviceContents .service p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  margin: auto;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.25;
+  z-index: 10;
+}
+
+#service .serviceContents .service:hover::after {
+  background-color: rgba(40, 47, 53, 0.7);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#contact {
+  background: url(../img/contact-page-bgi@2x.jpg) no-repeat center/cover;
+}
+
+#contact .bar {
+  background-color: white;
+}
+
+#contact p {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.35;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#footer {
+  height: 79px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* --------------------
+  コンタクトページ
+---------------------*/
+.contactHeader {
+  width: 100vw;
+  height: calc(100vh - (100vh - 453px));
+  background: url(../img/contact-page-bgi@2x.jpg) no-repeat center/cover;
+  position: relative;
+}
+
+.contactHeader .headerNav {
+  position: fixed;
+}
+
+.contactHeader .contactTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.contactHeader .contactTitle h1 {
+  font-size: 6.0rem;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 0.83333;
+  color: white;
+}
+
+.contactHeader .thinTitle {
+  position: absolute;
+  bottom: 40px;
+  left: 48px;
+}
+
+#contactForm {
+  display: block;
+  width: 700px;
+  margin: 0 auto;
+}
+
+#contactForm input[type=checkbox] {
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+#contactForm input[type=checkbox]:first-of-type {
+  margin-left: 0;
+}
+
+#contactForm .checkbox {
+  margin-bottom: 20px;
+}
+
+#contactForm .name,
+#contactForm .mail,
+#contactForm .phonenumber {
+  margin-bottom: 20px;
+}
+
+#contactForm .name input,
+#contactForm .mail input,
+#contactForm .phonenumber input {
+  width: 100%;
+}
+
+#contactForm .contact {
+  margin-bottom: 80px;
+}
+
+#contactForm .contact textarea {
+  width: 100%;
+  height: 171px;
+}
+
+#contactForm button input[type=submit] {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburgerMenu {
+  display: none;
+}
+
+/*---------------------------------------------------
+レスポンシブ
+--------------------------------------------------*/
+@media (max-width: 1000px) {
+  body * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  section {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100vw;
+  }
+  h2 {
+    font-size: 3.0rem;
+    line-height: 0.4;
+    margin-bottom: 50px;
+  }
+  h2 .bar {
+    width: 90px;
+    height: 5px;
+    background-color: #171717;
+    display: inline-block;
+    margin-left: 33px;
+  }
+  h4 {
+    font-size: 4.0rem;
+    font-weight: bold;
+    line-height: 1.675;
+    opacity: 0.05;
+  }
+  .side {
+    margin-left: 0;
+  }
+  button {
+    margin: 0 auto 40px;
+  }
+  #header .headerImg {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  #header .headerNav {
+    padding: 0 15px;
+    width: 100vw;
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+    z-index: 100;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    /* ×に変換する （クラス付与ver）*/
+  }
+  #header .headerNav.withColor {
+    background-color: #282F35;
+  }
+  #header .headerNav .navTitle {
+    font-size: 2.6rem;
+    font-weight: bold;
+    font-style: italic;
+    white-space: nowrap;
+  }
+  #header .headerNav .nav {
+    display: none;
+  }
+  #header .headerNav .hamburgerMenu {
+    /* position: fixed;
+      top: 10px;
+      right: 10px; */
+    /* ↑必要に応じて */
+    height: 60px;
+    width: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #header .headerNav .menu,
+  #header .headerNav .menu::before,
+  #header .headerNav .menu::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: white;
+    position: absolute;
+  }
+  #header .headerNav .menu:before {
+    background-color: wheat;
+    bottom: 8px;
+  }
+  #header .headerNav .menu:after {
+    background-color: white;
+    top: 8px;
+  }
+  #header .headerNav .hamburgerMenu.close .menu {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  #header .headerNav .hamburgerMenu.close .menu::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    bottom: 0;
+  }
+  #header .headerNav .hamburgerMenu.close .menu::after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: 0;
+  }
+  #header .title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    padding-left: 0;
+  }
+  #header .title h1 {
+    font-size: 3.7rem;
+    font-weight: bold;
+    line-height: 0.51351;
+    color: white;
+    margin-bottom: 53px;
+    white-space: nowrap;
+  }
+  #header .title .headerSubTitle {
+    font-size: 3.0rem;
+    font-weight: bold;
+    line-height: 1.66667;
+    padding-left: 0;
+    text-align: center;
+  }
+  #header .title .headerSubTitle span {
+    display: inline-block;
+  }
+  .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .hamburger nav ul {
+    width: 100vw;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hamburger nav ul a {
+    font-size: 1.6rem;
+    line-height: 1.375;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+  }
+  .hamburger nav ul li {
+    margin-bottom: 30px;
+  }
+  .hamburger nav ul li:last-of-type {
+    margin-bottom: 0;
+  }
+  #concept h2 {
+    margin-bottom: 50px;
+  }
+  #concept h3 {
+    width: 284px;
+    font-size: 2.0rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  #concept .conceptContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 70px;
+  }
+  #concept .conceptContent p {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  #concept .conceptContent img {
+    width: 100%;
+  }
+  #works {
+    background: url(../img/works-bgi@2x.jpg) no-repeat center/cover;
+  }
+  #works .bar {
+    background-color: white;
+  }
+  #works .worksContents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+  }
+  #works .worksContents .works {
+    width: 320px;
+    height: 334px;
+    background-color: white;
+    margin-bottom: 30px;
+    margin-right: 0px;
+  }
+  #works .worksContents .works:last-of-type {
+    margin-bottom: 80px;
+  }
+  #service .serviceContents {
+    margin: 0 calc(50% - 50vw);
+    width: 100vw;
+    display: block;
+  }
+  #service .serviceContents .service {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    margin-bottom: 30px;
+  }
+  #service .serviceContents .service img {
+    width: 100vw;
+  }
+  #service .serviceContents .service p {
+    font-size: 2.0rem;
+    line-height: 2.5;
+  }
+  #contact p {
+    margin-bottom: 30px;
+  }
+  /* --------------------
+  コンタクトページ(レス）
+---------------------*/
+  .contactHeader .contactTitle h1 {
+    font-size: 3.0rem;
+    line-height: 1.6;
+  }
+  #contactForm {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #contactForm input[type=checkbox] {
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+  #contactForm input[type=checkbox]:first-of-type {
+    margin-left: 0;
+  }
+  #contactForm .checkbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 20px;
+  }
+  #contactForm .checkbox p {
+    margin-bottom: 13px;
+  }
+  #contactForm .name,
+  #contactForm .mail,
+  #contactForm .phonenumber {
+    margin-bottom: 20px;
+  }
+  #contactForm .name input,
+  #contactForm .mail input,
+  #contactForm .phonenumber input {
+    width: 100%;
+  }
+  #contactForm .contact {
+    margin-bottom: 80px;
+  }
+  #contactForm .contact textarea {
+    width: 100%;
+    height: 171px;
+  }
+  #contactForm button input[type=submit] {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+}
+/*# sourceMappingURL=style.css.map */

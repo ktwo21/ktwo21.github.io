@@ -1,0 +1,355 @@
+@charset "UTF-8";
+@import "style";
+
+@media (max-width:768px){
+
+
+      section{
+        @include padding(30px);
+      }
+
+
+
+      
+    //HEADER
+      #header{
+
+        .header__background--black{
+          @include header-black(73%,100vh );
+          &-about{
+            @include header-black(50%,63vh );
+          }
+        }
+        
+        .header__title{
+          padding-right: 80px;
+          @include header-title(100vh);
+          &-about{
+            padding-right: 98px;
+            @include header-title(63vh);
+
+          }
+          &--maintitle{
+     
+            font-family: $fontM;
+            font-size: 5.2rem;
+            line-height: (60 / 52);
+            font-weight: bold;
+          }
+        }
+        .header__nav{
+          display: flex;
+          width: 100vw;
+          justify-content: space-between;
+          align-items: center;
+          padding: 30px 30px 30px;
+          position: fixed;
+          z-index: 1;
+          img{
+            width: 189px;
+          }
+
+        
+      }
+    }
+
+      .background{
+        display: block;
+
+        //ABOUT
+        #about{
+          padding-top: 120px;
+          color: #333;
+          .about__container{
+            position: relative;
+            img{
+              width: 100vw;
+              margin: 0 calc(50% - 50vw);
+            }
+            .about__intro{
+              height: 359px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              padding: 60px 89px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%);
+              &--description{
+                line-height: 1.5;
+                margin-bottom: 30px;
+              }
+            
+          
+         }
+        }
+    }
+      #works{
+        width: 520px;
+        margin-right: 0;
+      }
+      
+      #culture{
+        width: 520px;
+        padding-left: 30px;
+      }
+    }
+      
+    #topics{ 
+      .topics__container--buttom{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    #contact{
+      padding-top: 60px;
+      padding-bottom: 120px;
+      background-color: $back;
+      .contact__container{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .contact__intro{
+        margin-right: 80px;
+        p{
+          font-family: $fontY;
+          font-size: 1.6rem;
+          line-height: (32 / 16);
+          margin-bottom: 30px;
+        }
+      }
+    }
+      
+
+      //VISON
+    #vision{
+      padding-left: 150px;
+      .vision__container{
+        width: 100%;
+      }
+    }
+
+      //CEO MESSAGE
+    #message{
+      .message__container{
+        &--box{
+          width: 494px;
+          &-text{
+            width: 84%;
+          }
+        }
+      }
+    }
+      //COMPANY
+    #company{
+      padding-bottom: 120px;
+      overflow: hidden;
+      .company__container{
+        &--description{
+          &-item{
+            margin-left: 60px;
+          }
+        }
+        .map{
+          width: 100%;
+          height: 230px;
+        }
+      }
+    }
+
+    #form{
+      text-transform: uppercase;
+      padding-top: 120px;
+      padding-bottom: 120px;
+      .form__container{
+        width: 668px;
+    }
+
+    }
+}
+
+@media (max-width:376px){
+
+  p{
+    font-size: 1.4rem;
+  }
+
+  section{
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  #header{
+    .header__background--contact{
+      background: url(../images/heading-img_contact_small@2x.png)no-repeat center/cover;
+      @include header-image(76vw,52vh );
+    }
+    
+    .header__title{
+      padding-right: 20px;
+      @include header-title(100vh);
+      &-about{
+        padding-right: 20px;
+        @include header-title(63vh);
+      }
+    }
+
+    .header__nav{
+      display: flex;
+      width: 100vw;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 15px 30px;
+      position: fixed;
+      z-index: 1;
+      &.withColor{
+        transition: all 0.3s ease;
+        background-color:rgba($color: $black, $alpha: 0.9)
+      }
+    }
+    .header__hamburger{
+      width: 50vw;
+    }
+  }
+
+  .background{
+    display: block;
+
+    //ABOUT
+    #about{
+      .about__container{
+        img{
+          width: 100vw;
+          height: 541px;
+          margin: 0 calc(50% - 50vw);
+          object-fit:cover;
+        }
+        .about__intro{
+          width:  345px;
+          height: 441px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 60px 15px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          &--description{
+            line-height: 1.5;
+            margin-bottom: 80px;
+          }
+        }
+      }
+    }
+  #works{
+    width: 100vw;
+    margin-right: 0;
+    img{
+      width: calc(100vw - 30px);
+    }
+  }
+  
+  #culture{
+    width: 100vw;
+    padding-left: 15px;
+    img{
+      width: calc(100vw - 30px);
+    }
+  }
+
+  
+  }
+
+#topics{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  .topics__container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 348px;
+    position: relative;
+    &--title{
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .topics__aside{
+    &--news{
+      padding-bottom: 10px;
+      width: 100%;
+      border-bottom: #ddd solid 1px;
+    }
+  }
+
+
+}
+
+#contact{
+  .contact__container{
+    img{
+      width: 100%;
+    }
+  }
+  .contact__intro{
+    margin-right: 0;
+    p{
+      font-family: $fontY;
+      font-size: 1.6rem;
+      line-height: (32 / 16);
+      margin-bottom: 30px;
+    }
+  }
+}
+  #form{
+    text-transform: uppercase;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    .form__container{
+      width: 345px;
+      .foo{
+        label{
+          display: block;
+          padding-bottom: 3px;
+        }
+        input[type="radio"]{
+          margin-right: 10px;
+          margin-left: 0;
+        
+      
+          
+          
+          
+          &:first-of-type{
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+  } 
+  #vision{
+    padding-left: 15px;
+    .vision__container{
+      width: 100%;
+    }
+  }
+  #message{
+    .message__container--image{
+      width: 100vw;
+      margin: 0 calc(50% - 50vw);
+      img{
+        width: 100%;
+      }
+    }
+  }
+
+}
