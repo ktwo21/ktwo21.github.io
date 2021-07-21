@@ -1,798 +1,564 @@
 @charset "UTF-8";
-html {
-  scroll-behavior: smooth;
-  font-size: 62.5%;
-}
-
-body * {
-  color: #171717;
-  font-family: 'Noto Serif', serif;
-  font-family: 'Noto Serif JP', serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
 
-body::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  z-index: 9999;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity .4s ease;
-  -webkit-transition: opacity .4s ease;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
 
-body.fadeout::after {
-  opacity: 1;
-}
+html{
+	font-size:62.5%;
+	font-family:'Noto Serif JP', serif;
+	letter-spacing:0.05em;
+	scroll-behavior:smooth;
+}
+
+body{
+	color:#171717;
+	box-sizing:border-box;
+}
+
+.noScroll{
+	overflow:hidden;
+}
+
+/* 共通 */
+
+.title{
+	display:flex;
+	margin-bottom:80px;
+	align-items:center;
+	font-family:Noto Serif;
+	font-size:calc(3rem + 30 *(100vw - 375px)/1065);
+	font-weight:700;
+	font-style:italic;
+	color:#282F35;
+	line-height:1;
+}
+.title:after{
+	content:"";
+	display:block;
+	margin-left:33px;
+	width:calc(90px + 110 *(100vw - 375px)/1065);
+	height:5px;
+	background-color:#282F35;
+}
 
-section {
-  padding-top: 100px;
-  padding-bottom: 70px;
-  padding-left: 120px;
-  padding-right: 120px;
+.white{
+	color:white;
+	justify-content:flex-end;
 }
-
-h2 {
-  font-size: 6.0rem;
-  font-weight: bold;
-  font-style: italic;
-  line-height: 0.4;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #282F35;
-  margin-bottom: 80px;
+.white:after{
+	background-color:white;
 }
 
-h2 .bar {
-  width: 200px;
-  height: 5px;
-  background-color: #171717;
-  display: inline-block;
-  margin-left: 33px;
-}
 
-.end {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+.button{
+	display:inline-block;
+	width:235px;
+	height:59px;
+	background:#F7D43F;
+	box-shadow:0 0 6px #1B1310;
+	border-radius:50px;
+	font-size:1.6rem;
+	font-weight:700;
+	line-height:59px;
+	text-align:center;
+}
+.button a{
+	display:block;
+	width:100%;
+	height:100%;
 }
 
-h4 {
-  font-size: 9.0rem;
-  font-weight: bold;
-  line-height: 0.32222;
-  opacity: 0.05;
+/* 横スクロール防止 */
+.top-page,.contact-page{
+	overflow:hidden;
 }
 
-p {
-  font-size: 1.6rem;
-  line-height: 1.875;
-  font-weight: normal;
-}
 
-small {
-  font-size: 1.4rem;
-  font-weight: bold;
-  line-height: 2.14286;
+/* ここから個別にスタイルあてるよ */
+
+/* ヒーローエリア */
+.hero-area{
+	position:relative;
+	width:100vw;
+	height:100vh;
+	background:url(../image/fv-1.png)no-repeat center/cover;
+	color:white;
+	animation-name:BG;
+	animation-duration:27s;
+	animation-iteration-count:infinite;
 }
+
+@keyframes BG{
+
+	0%{
+	background:url(../image/fv-1.png)no-repeat center/cover;
+	}
+	10%{
+	background:url(../image/fv-1.png)no-repeat center/cover;
+	}
+	40%{
+	background:url(../image/fv-2.png)no-repeat center/cover;
+	}
+	50%{
+	background:url(../image/fv-2.png)no-repeat center/cover;
+	}
+	80%{
+	background:url(../image/fv-3.png)no-repeat center/cover;
+	}
+	90%{
+	background:url(../image/fv-3.png)no-repeat center/cover;
+	}
+	
+}
 
-button {
-  background-color: #F7D43F;
-  width: 235px;
-  height: 59px;
-  border: none;
-  border-radius: 50px;
-  -webkit-box-shadow: 0 0 6px #171717;
-          box-shadow: 0 0 6px #171717;
-  display: block;
-  margin: 0 auto 70px;
+.hero-area__navigation{
+	position:fixed;
+	z-index:300;
+	display:flex;
+	width:100vw;
+	height:96px;
+	align-items:center;
+	justify-content:space-between;
+	left:50%;
+	transform:translateX(-50%);
+	
 }
 
-button a {
-  font-family: 'Noto Serif', serif;
-  font-size: 1.6rem;
-  font-weight: bold;
-  line-height: 1.875;
+.logo{
+	margin-left:8.3vw;
+	font-size:2.6rem;
+	font-weight:700;
+	font-style:italic;
+	line-height:calc(36/26);
 }
 
-button:hover {
-  background-color: white;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+.menu{
+	margin-right:8.3vw;
 }
 
-a {
-  text-decoration: none;
-  color: #171717;
+.menu ul{
+	display:flex;
+	gap:30px;
 }
 
-img {
-  vertical-align: bottom;
+.menu ul li a{
+	font-size:1.6rem;
+	font-weight:700;
+	font-style:italic;
+	line-height:calc(36/26);
 }
 
-.right {
-  text-align: end;
+.hero-title{
+	position:absolute;
+	top:54.3vh;
+	left:8.3vw;
+	font-size:calc(3rem + 10 * (100vw - 375px)/1065);
+	font-weight:700;
+	line-height:calc(70/40);
 }
 
-.white {
-  color: white;
+.hero-title:first-line{
+	font-size:calc(3.7rem + 33 * (100vw - 375px)/1065);
+	
+	line-hegiht;calc(70/70);
 }
 
-.side {
-  margin-left: 100px;
+
+/* 🍔 */
+.hamburger-menu{
+	display:none;
+	margin-right:8.3vw;
+	width:30px;
+	height:30px;
+	align-items:center;
+	cursor:pointer;
 }
 
-.wrap {
-  overflow: hidden;
+@media (max-width:768px){
+	.menu{
+		display:none;
+	}
+	.hamburger-menu{
+		display:flex;
+	}
 }
 
-#header .headerImg {
-  width: 100vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after{
+	content:"";
+	position:relative;
+	display:block;
+	width:30px;
+	height:3px;
+	background-color:white;
+	transition:all 0.3s;
 }
 
-#header .headerNav {
-  padding: 0 120px;
-  width: 100vw;
-  position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: white;
-  z-index: 100;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+.menu-btn span:before{
+	position:absolute;
+	top:10px;
+	transition:all 0.3s;
 }
 
-#header .headerNav.withColor {
-  background-color: #282F35;
+.menu-btn span:after{
+	position:absolute;
+	bottom:10px;
 }
 
-#header .headerNav .navTitle {
-  font-size: 2.6rem;
-  font-weight: bold;
-  font-style: italic;
+#menu-btn{
+	position:absolute;
+	top:-100px;
 }
 
-#header .headerNav .nav {
-  width: 349px;
+#menu-btn:checked ~ .menu-btn span{
+	background-color:rgba(255,255,255,0);
+	transition:all 0.3s;
 }
 
-#header .headerNav .nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+#menu-btn:checked ~ .menu-btn span::before{
+	top:0;
+	transform:rotate(45deg);
+	transition:all 0.3s;
 }
 
-#header .headerNav .nav ul li > a {
-  font-size: 1.6rem;
-  font-weight: bold;
-  font-style: italic;
-  color: white;
+#menu-btn:checked ~ .menu-btn span::after{
+	top:0;
+	transform: rotate(-45deg);
+	transition:all 0.3s;
 }
 
-#header .title {
-  position: relative;
-  top: 50%;
-  padding-left: 120px;
+.hamburger-navigation{
+	position:fixed;
+	z-index:-1;
+	width:50vw;
+	height:100vh;
+	background-color:#282F35;
+	font-size:1.6rem;
+	font-weight:700;
+	font-style:italic;
+	line-height:calc(22/16);
+	top:0;
+	right:-100%;
+	transition:all 0.3s;
 }
 
-#header .title h1 {
-  font-size: 7.0rem;
-  font-weight: bold;
-  line-height: 0.71429;
-  color: white;
-  margin-bottom: 23px;
+.hamburger-navigation ul{
+	display:flex;
+	width:50vw;
+	height:100vh;
+	flex-direction:column;
+	gap:30px;
+	justify-content:center;
+	align-items:center;
 }
 
-#header .title .headerSubTitle {
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
-  line-height: 1.25;
-  padding-left: 40px;
+#menu-btn:checked ~ .hamburger-navigation{
+	right:0;
+	transition:0.3s;
 }
+
+
 
-#concept h2 {
-  margin-bottom: 70px;
+
+/* コンセプト */
+.concept-container{
+	margin:0 auto;
+	padding:100px 15px 70px;
+	max-width:1200px;
+	width:100%;
+}
+.concept-container:after{
+	content:"Our Concept";
+	display:block;
+	font-size:calc(4rem + 5*(100vw - 375px)/1065);
+	font-weight:700;
+	color:#171717;
+	opacity:0.05;
+	text-align:end;
 }
 
-#concept h3 {
-  width: 600px;
-  font-size: 3.0rem;
-  font-weight: bold;
-  line-height: 1.66667;
-  margin: 0 auto 60px;
-  text-align: center;
+.concept-copy{
+	margin-bottom:60px;
+	font-size:calc(2rem + 10 *(100vw - 375px)/1065);
+	font-weight:700;
+	line-height:calc(50/30);
+	text-align:center;
 }
 
-#concept .conceptContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 70px;
+.concept-item{
+	display:flex;
+	margin-bottom:70px;
+	align-items:center;
+	font-size:1.6rem;
+	font-weight:700;
+	gap:8.3vw;
+	line-height:calc(30/16);
+	justify-content:center;
+	text-align:justity;
 }
 
-#concept .conceptContent p {
-  width: 440px;
-  margin-right: 120px;
+.concept-item p{
+	width:30.5vw;
 }
 
-#concept .conceptContent img {
-  width: 440px;
+.concept-item img{
+	width:30.5vw;
+	height:auto;
 }
 
-#works {
-  background: url(../img/works-bgi@2x.jpg) no-repeat center/cover;
+
+/* ワークス */
+.works-bg{
+	margin:0 calc(50% - 50vw);
+	width:100vw;
+	background:url("../image/works-bgi.png")no-repeat center/cover;
 }
 
-#works .bar {
-  background-color: white;
+.works-container{
+	margin:0 auto;
+	padding:100px 15px 70px;
+	max-width:1200px;
+	width:100%;
+	text-align:center;
 }
 
-#works .worksContents {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0 0 80px;
+.works-container:after{
+	content:"Our Works";
+	display:block;
+	margin-top:70px;
+	font-size:calc(4rem + 5*(100vw - 375px)/1065);
+	font-weight:700;
+	color:white;
+	opacity:0.05;
+	text-align:start;
 }
+
+.works-card{
+	display:flex;
+	margin-bottom:80px;
+	gap:20px;
+	justify-content:center;
 
-#works .worksContents .works {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  height: 334px;
-  background-color: white;
-  margin-right: 20px;
 }
 
-#works .worksContents .works:last-of-type {
-  margin-right: 0;
+.works-item{
+	width:22.2vw;
+	text-align:justify;
+	display:flex;
+	flex-direction:column;
 }
 
-#works .worksContents .works img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.works-item img{
+	width:100%;
+	height:auto;
 }
 
-#works .worksContents .works p {
-  width: 100%;
-  padding: 20px 25px;
+.item-text{
+	display:flex;
+	align-items:center;
+	padding:25px 20px;
+	width:100%;
+	background:white;
+	font-size:16px;
+	font-weight:400;
+	line-height:calc(30/16);
+	flex-grow:1;
 }
 
-#service .serviceContents {
-  margin: 0 calc(50% - 50vw) 70px;
-  width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+/* サービス */
+.service-container{
+	margin:0 auto;
+	padding:100px 15px 70px;
+	max-width:1200px;
+	width:100%;
 }
+.service-container:after{
+	content:"Our Service";
+	display:block;
+	margin-top:70px;
+	font-size:calc(4rem + 5*(100vw - 375px)/1065);
+	font-weight:700;
+	color:#171717;
+	opacity:0.05;
+	text-align:end;
+}
 
-#service .serviceContents .service {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  position: relative;
+.service-nav ul{
+	display:flex;
+	margin:0 calc(50% - 50vw);
+	width:100vw;
+	gap:0;
 }
 
-#service .serviceContents .service img {
-  width: 100%;
+.service-nav ul li{
+	position:relative;
+	flex:1;
+	background:#171717;
 }
 
-#service .serviceContents .service::after {
-  content: "";
-  background-color: rgba(40, 47, 53, 0);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+.service-item img{
+	width:100%;
+	vartical-align:bottom;
 }
 
-#service .serviceContents .service p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
-  margin: auto;
-  font-size: 40px;
-  font-weight: bold;
-  font-style: italic;
-  line-height: 1.25;
-  z-index: 10;
+.service-item img:hover{
+	opacity:0.3;
 }
 
-#service .serviceContents .service:hover::after {
-  background-color: rgba(40, 47, 53, 0.7);
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+.service-item p{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	color:white;
+	font-size:calc(2rem + 2 *(100vw - 375px)/1065);
+	font-weight:700;
+	font-style:italic;
+	line-height:calc(50/40);
 }
+
+
+/* Contact */
 
-#contact {
-  background: url(../img/contact-page-bgi@2x.jpg) no-repeat center/cover;
+.contact-bg{
+	margin:0 calc(50% - 50vw);
+	width:100vw;
+	background:url("../image/contact-bgi.png")no-repeat center/cover;
 }
 
-#contact .bar {
-  background-color: white;
+.contact-container{
+	margin:0 auto;
+	padding:100px 15px 70px;
+	max-width:1200px;
+	width:100%;
+	text-align:center;
 }
 
-#contact p {
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1.35;
-  text-align: center;
-  margin-bottom: 40px;
+.contact-container:after{
+	content:"Contact Us";
+	display:block;
+	margin-top:70px;
+	font-size:calc(4rem + 5*(100vw - 375px)/1065);
+	font-weight:700;
+	color:white;
+	opacity:0.05;
+	text-align:start;
 }
 
-#footer {
-  height: 79px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.contact-text{
+	color:white;
+	font-size:2rem;
+	font-weight:700;
+	line-height:calc(29/20);
+	margin-bottom:40px;
 }
 
-/* --------------------
-  コンタクトページ
----------------------*/
-.contactHeader {
-  width: 100vw;
-  height: calc(100vh - (100vh - 453px));
-  background: url(../img/contact-page-bgi@2x.jpg) no-repeat center/cover;
-  position: relative;
+
+/* Footer */
+footer{
+	width:100vw;
+	height:79px;
+	text-align:center;
+}
+small{
+	font-size:1.4rem;
+	font-wieght:bold;
+	line-height:79px;
 }
+
+
+/* コンタクトページはここから */
 
-.contactHeader .headerNav {
-  position: fixed;
+/* ヒーローエリア */
+.navigation{
+	position:relative;
+	width:100vw;
+	height:31.4vw;
+	background:url("../image/contact-page-bgi.png")no-repeat center/cover;
+	color:white;
+
 }
+
 
-.contactHeader .contactTitle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+
+.navigation:after{
+	content:"Conact Us";
+	position:absolute;
+	bottom:40px;
+	left:8.3vw;
+	display:block;
+	font-size:calc(4rem + 5*(100vw - 375px)/1065);
+	font-weight:700;
+	color:white;
+	opacity:0.05;
+	text-align:start;
 }
 
-.contactHeader .contactTitle h1 {
-  font-size: 6.0rem;
-  font-weight: bold;
-  font-style: italic;
-  line-height: 0.83333;
-  color: white;
+.navigation-container{
+	display:flex;
+	padding-top:40px;
+	justify-content:space-between;
 }
 
-.contactHeader .thinTitle {
-  position: absolute;
-  bottom: 40px;
-  left: 48px;
+.contact-page__title{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	font-size:calc(3rem + 30 *(100vw - 375px)/1065);
+	font-weight:700;
+	font-style:italic;
+	line-height:calc(48/60);
+	letter-spacing:0.1em;
 }
 
-#contactForm {
-  display: block;
-  width: 700px;
-  margin: 0 auto;
+/* フォーム */
+form{
+	margin:0 auto;
+	padding:97px 15px 80px;
+	max-width:700px;
+	width:100%;
+	font-size:1.6rem;
+	font-weight:400;
+	line-height:calc(30/16);
+	text-align:center;
 }
 
-#contactForm input[type=checkbox] {
-  margin-right: 10px;
-  margin-left: 20px;
+dt{
+	font-family:Noto Serif;
+	text-align:start;
 }
 
-#contactForm input[type=checkbox]:first-of-type {
-  margin-left: 0;
+dd{
+	margin-bottom:22px;
 }
+
 
-#contactForm .checkbox {
-  margin-bottom: 20px;
+ul{
+	display:flex;
+	align-items:center;
+	gap:20px;
 }
 
-#contactForm .name,
-#contactForm .mail,
-#contactForm .phonenumber {
-  margin-bottom: 20px;
+input[type="checkbox"]{
+	margin-right:10px;
 }
 
-#contactForm .name input,
-#contactForm .mail input,
-#contactForm .phonenumber input {
-  width: 100%;
+input[type="text"],[type="email"],[type="tel"]{
+	width:100%;
+	height:30px;
+	border:1px solid #141414;
 }
 
-#contactForm .contact {
-  margin-bottom: 80px;
+textarea{
+	margin-bottom:80px;
+	border:1px solid #141414;
+	max-width:700px;
+	width:100%;;
 }
+
+
+	
+
+
 
-#contactForm .contact textarea {
-  width: 100%;
-  height: 171px;
-}
-
-#contactForm button input[type=submit] {
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  font-size: 1.6rem;
-  font-weight: bold;
-}
-
-.hamburger {
-  display: none;
-}
-
-.hamburgerMenu {
-  display: none;
-}
-
-/*---------------------------------------------------
-レスポンシブ
---------------------------------------------------*/
-@media (max-width: 1000px) {
-  body * {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  section {
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 100vw;
-  }
-  h2 {
-    font-size: 3.0rem;
-    line-height: 0.4;
-    margin-bottom: 50px;
-  }
-  h2 .bar {
-    width: 90px;
-    height: 5px;
-    background-color: #171717;
-    display: inline-block;
-    margin-left: 33px;
-  }
-  h4 {
-    font-size: 4.0rem;
-    font-weight: bold;
-    line-height: 1.675;
-    opacity: 0.05;
-  }
-  .side {
-    margin-left: 0;
-  }
-  button {
-    margin: 0 auto 40px;
-  }
-  #header .headerImg {
-    width: 100vw;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  #header .headerNav {
-    padding: 0 15px;
-    width: 100vw;
-    position: fixed;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    color: white;
-    z-index: 100;
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-    /* ×に変換する （クラス付与ver）*/
-  }
-  #header .headerNav.withColor {
-    background-color: #282F35;
-  }
-  #header .headerNav .navTitle {
-    font-size: 2.6rem;
-    font-weight: bold;
-    font-style: italic;
-    white-space: nowrap;
-  }
-  #header .headerNav .nav {
-    display: none;
-  }
-  #header .headerNav .hamburgerMenu {
-    /* position: fixed;
-      top: 10px;
-      right: 10px; */
-    /* ↑必要に応じて */
-    height: 60px;
-    width: 60px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  #header .headerNav .menu,
-  #header .headerNav .menu::before,
-  #header .headerNav .menu::after {
-    content: '';
-    display: block;
-    height: 3px;
-    width: 25px;
-    border-radius: 3px;
-    background-color: white;
-    position: absolute;
-  }
-  #header .headerNav .menu:before {
-    background-color: wheat;
-    bottom: 8px;
-  }
-  #header .headerNav .menu:after {
-    background-color: white;
-    top: 8px;
-  }
-  #header .headerNav .hamburgerMenu.close .menu {
-    background-color: rgba(255, 255, 255, 0);
-  }
-  #header .headerNav .hamburgerMenu.close .menu::before {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    bottom: 0;
-  }
-  #header .headerNav .hamburgerMenu.close .menu::after {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    top: 0;
-  }
-  #header .title {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
-    padding-left: 0;
-  }
-  #header .title h1 {
-    font-size: 3.7rem;
-    font-weight: bold;
-    line-height: 0.51351;
-    color: white;
-    margin-bottom: 53px;
-    white-space: nowrap;
-  }
-  #header .title .headerSubTitle {
-    font-size: 3.0rem;
-    font-weight: bold;
-    line-height: 1.66667;
-    padding-left: 0;
-    text-align: center;
-  }
-  #header .title .headerSubTitle span {
-    display: inline-block;
-  }
-  .hamburger {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  .hamburger nav ul {
-    width: 100vw;
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .hamburger nav ul a {
-    font-size: 1.6rem;
-    line-height: 1.375;
-    font-weight: bold;
-    font-style: italic;
-    color: white;
-  }
-  .hamburger nav ul li {
-    margin-bottom: 30px;
-  }
-  .hamburger nav ul li:last-of-type {
-    margin-bottom: 0;
-  }
-  #concept h2 {
-    margin-bottom: 50px;
-  }
-  #concept h3 {
-    width: 284px;
-    font-size: 2.0rem;
-    line-height: 1.5;
-    margin-bottom: 30px;
-  }
-  #concept .conceptContent {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 70px;
-  }
-  #concept .conceptContent p {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 30px;
-  }
-  #concept .conceptContent img {
-    width: 100%;
-  }
-  #works {
-    background: url(../img/works-bgi@2x.jpg) no-repeat center/cover;
-  }
-  #works .bar {
-    background-color: white;
-  }
-  #works .worksContents {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 0;
-  }
-  #works .worksContents .works {
-    width: 320px;
-    height: 334px;
-    background-color: white;
-    margin-bottom: 30px;
-    margin-right: 0px;
-  }
-  #works .worksContents .works:last-of-type {
-    margin-bottom: 80px;
-  }
-  #service .serviceContents {
-    margin: 0 calc(50% - 50vw);
-    width: 100vw;
-    display: block;
-  }
-  #service .serviceContents .service {
-    -webkit-box-flex: 0;
-        -ms-flex: none;
-            flex: none;
-    margin-bottom: 30px;
-  }
-  #service .serviceContents .service img {
-    width: 100vw;
-  }
-  #service .serviceContents .service p {
-    font-size: 2.0rem;
-    line-height: 2.5;
-  }
-  #contact p {
-    margin-bottom: 30px;
-  }
-  /* --------------------
-  コンタクトページ(レス）
----------------------*/
-  .contactHeader .contactTitle h1 {
-    font-size: 3.0rem;
-    line-height: 1.6;
-  }
-  #contactForm {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-  }
-  #contactForm input[type=checkbox] {
-    margin-right: 10px;
-    margin-left: 20px;
-  }
-  #contactForm input[type=checkbox]:first-of-type {
-    margin-left: 0;
-  }
-  #contactForm .checkbox {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-bottom: 20px;
-  }
-  #contactForm .checkbox p {
-    margin-bottom: 13px;
-  }
-  #contactForm .name,
-  #contactForm .mail,
-  #contactForm .phonenumber {
-    margin-bottom: 20px;
-  }
-  #contactForm .name input,
-  #contactForm .mail input,
-  #contactForm .phonenumber input {
-    width: 100%;
-  }
-  #contactForm .contact {
-    margin-bottom: 80px;
-  }
-  #contactForm .contact textarea {
-    width: 100%;
-    height: 171px;
-  }
-  #contactForm button input[type=submit] {
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    font-size: 1.6rem;
-    font-weight: bold;
-  }
-}
-/*# sourceMappingURL=style.css.map */

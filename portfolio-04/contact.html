@@ -1,117 +1,76 @@
-<!DOCTYPE html>
+<DOCTYPE html>
+
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cresta Design2</title>
-  <meta name="description" content="クリスタデザイン中級">
-  <meta name="robots" content="noindex">
-  <!-- CSS -->
-  <link rel="stylesheet" href="CSS/reset.css">
-  <link rel="stylesheet" href="CSS/style.css">
-
-  <!-- font -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>お問い合わせ｜クリ★スタ デザインカンプからのコーディング</title>
+	<meta name="discription content="お問い合わせフォーム">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="./CSS/reset.css">
+	<link rel="stylesheet" href="./CSS/style.css">
 </head>
+
 <body>
-  <div class="wrap">
-   <!-- ヘッダー
-  ------------------------ -->
-  <header id="header">
-    <div class="contactHeader">
-      <div class="headerNav">
-        <p ><a href="index.html" class="navTitle white">Cresta Design</a> </p>
-        <div class="nav">
-          <nav>
-            <ul>
-              <li><a href="index.html#concept">Concept</a></li>
-              <li><a href="/index.html#service">Service</a></li>
-              <li><a href="/index.html#works">Works</a></li>
-              <li><a href="/index.html#contact">Contact</a></li>
-            </ul>
-          </nav>
-        </div> <!--nav-->
-        <!-- ------------
-            レスポンシブ
-            -------------->
+	<article class="contact-page">
+		<header class="navigation">
+			<div class="navigation-container">
+				<div class="logo">
+					<a href="./index.html">Cresta Design</a>
+				</div>
+				<nav class="menu">
+					<ul>
+						<li><a href="./index.html#concept">Concept</a></li>
+						<li><a href="./index.html#service">Service</a></li>
+						<li><a href="./index.html#works">Works</a></li>
+						<li><a href="./index.html#contact">Concept</a></li>
+					</ul>
+				</nav>
+			</div><!-- navitgation-container -->
+			<div class="contact-page__title">
+				<h2>Concact</h2>
+			</div><!-- contact-page__title -->
+		</header>
+		
+		<form action="#" method="post">
+			<dl>
+				<dt>お問い合わせ内容</dt>
+				<dd><ul>
+					<label>
+						<li><input type="checkbox" name="contact-content" value="資料請求">資料請求</li>
+					</label>
+					<label>
+						<li><input type="checkbox" name="contact-content" value="電話相談">お電話でのご相談を希望</li>
+					</label>
+					<label>
+						<li><input type="checkbox" name="contact-content" value="申し込み">申し込み</li>
+					</label>
+				</ul></dd>
+				
+				<label for="name"><dt>担当者名</dt></label>
+				<dd><input type="text" name="name" id="name"></dd>
+				
+				<label for="tel"><dt>電話番号</dt></label>
+				<dd><input type="tel" name="tel" id="tel"></dd>
+				
+				<label for="email"><dt>メールアドレス</dt></label>
+				<dd><input type="email" name="email" id="email"></dd>
+				
+				<label>
+				<dt>その他</dt>
+				<dd><textarea name="other" cols="40" rows="10"></textarea></dd>
+				</label>
+			</dl>
+			
+			<button type="submit" class="button">Submit</button>
+		</form>
+		
+		<footer>
+			<p><small>&copy;cresta.design all rights reserved</small></p>
+		</footer>
+	</article>
 
-            <div class="hamburgerMenu">
-              <span class="menu"></span>
-              </div>
-
-      </div> <!--headerNav-->
-
-         <!-- タイトル -->
-      <div class="contactTitle">
-  
-          <h1 class="headerTitle">contact</h1>
-        </div>
-        <h4 class="thinTitle left white">Contact us</h4>
-    </div>
-  </header>
-
-  <section>
-    <form id="contactForm">
-      <div class="checkbox">
-        <p>お問い合わせ内容</p>
-        <div class="input1">
-          <input type="checkbox" >資料請求
-        </div>
-        <div class="input2">
-          <input type="checkbox">お電話でのご相談を希望
-        </div>
-        <div class="input3">
-          <input type="checkbox">お申込み
-        </div>
-      </div>
-      <div class="name">
-        <p>担当者名</p>
-        <input type="text">
-      </div>
-      <div class="phonenumber">
-        <p>電話番号</p>
-        <input type="tel">
-      </div>
-      <div class="mail">
-        <p>メールアドレス</p>
-        <input type="email">
-      </div>
-      <div class="contact">
-        <p>お問い合わせ内容</p>
-        <textarea></textarea>
-      </div>
-    </div>
-    <div class="submit">
-     
-      <button> 
-        <input type="submit" value="Submit" class="button">
-      </button>
-    </div>
-
-    </form>
-  </section>
-
-  
-  <div class="hamburger">
-    <nav>
-      <ul>
-        <li><a href="index.html#concept">Concept</a></li>
-        <li><a href="index.html#service">Service</a></li>
-        <li><a href="index.html#works">Works</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-
-
-
-   <!-- jQuery -->
-   <script src="JS/jquery.min.js"></script>
-   <script src="JS/jquery.bgswitcher.js"></script>
-   <script src="JS/script.js"></script>
-
-  </div>
 </body>
+
 </html>

@@ -1,163 +1,177 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cresta Design2</title>
-  <meta name="description" content="クリスタデザイン中級">
-  <meta name="robots" content="noindex">
-  <!-- CSS -->
-  <link rel="stylesheet" href="CSS/reset.css">
-  <link rel="stylesheet" href="CSS/style.css">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>クリ★スタ デザインカンプからのコーディング</title>
+		<meta name="discription" content="ディスクリプション">
+		
+		<!-- CSS -->
+		<link rel="stylesheet" href="./CSS/reset.css">
+		<link rel="stylesheet" href="./CSS/style.css">
+	</head>
+	<body>
+		
+	<article class="top-page">
+	
+		<header class="hero-area">
+		
+			<div class="hero-area__navigation">
+				<div class="logo">
+					<a href="index.html">Cresta Design</a>
+				</div>
+				<nav class="menu">
+					<ul>
+						<li><a href="#concept">Concept</a></li>
+						<li><a href="#service">Service</a></li>
+						<li><a href="#works">Works</a></li>
+						<li><a href="./contact.html">Contact</a></li>
+					</ul>
+				</nav>
+				
+				
+				<!-- 🍔 -->
+				<div class="hamburger-menu">
+					<label>
+						<input type="checkbox" id="menu-btn">
+						<div class="menu-btn"><span></span></div>
+						<div class="hamburger-navigation">
+						<nav>
+							<ul>
+								<li><a href="#concept">Concept</a></li>
+								<li><a href="#service">Service</a></li>
+								<li><a href="#works">Works</a></li>
+								<li><a href="#contact">Concept</a></li>
+							</ul>
+						</nav>
+						</div><!-- /.hamburger-navigation -->
+					</label>
+				</div>
+				
+			</div><!-- /.hero-area__navigation -->
+			
+				
+			
+			
+			<seciton class="hero-title">
+				<h1>Design for Smile.<br>快適なオフィスをデザインする</h1>
+			</section><!-- /.hero-title -->
+		</header><!-- /.hero-area -->
+		
+		
+		<main>
+			<section id="concept" class="concept-container">
+				<header class="title">
+					<h2>CONCEPT</h2>
+				</header>
+				<section class="concept-box">
+					<header class="concept-copy">
+						<h3>“働きたくなる空間”をデザインすることで<br>人々を幸せにする。</h3>
+					</header>
+					<div class="concept-item">
+						<p>私たちは、オフィスに特化した空間デザイン専門としております。その理由は、「働きたくなる空間で仕事ができれば多くの人を幸せにできるのではないか」と考えるためです。そんな想いの株式会社Cresta Designだからこそできる空間デザインを提供させていただきます。</p>
+						<img src="./image/concept-image.png" alt="コンセプトのイメージ画像">
+					</div><!-- cocept-item -->
+				</section><!-- concept-box -->
+			</section><!-- /#concept /.concept-container -->
+			
+			
+			<div class="works-bg">
+			<article id="works" class="works-container">
+				<header class="title white">
+					<h2>Works</h2>
+				</header>
+				<section>
+					<div class="works-card">
+						<div class="works-item">
+							<img src="./image/card-img01.png" alt="ニュース１">
+								<div class="item-text">
+									<p>新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
+								</div>
+						</div><!-- /.works-item -->
+						<div class="works-item">
+							<img src="./image/card-img02.png" alt="ニュース２">
+								<div class="item-text">
+									<p>新規サイトを公開しました。今回のサイトは白と黒を基調にした</p>
+								</div>
+						</div><!-- /.works-item -->
+						<div class="works-item">
+							<img src="./image/card-img03.png" alt="ニュース３">
+								<div class="item-text">
+									<p>新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
+								</div>
+						</div><!-- /.works-item -->
+					</div><!-- works-card -->
+					<div class="button">
+						<a href="#">View more</a>
+					</div>
+				</section>
+			</article><!-- /#works /.works-container -->
+			</div><!-- /.works-bg -->
+			
+			
+			<article id="service" class="service-container">
+				<header class="title">
+					<h2>Service</h2>
+				</header>
+				<nav class="service-nav">
+					<ul>
+						<li>
+							<a href="#">
+								<div class="service-item">
+									<img src="./image/hearing.png" alt="ヒアリング Hearing">
+									<p>Hearing</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="service-item">
+									<img src="./image/planning.png" alt="プランニング Planning">
+									<p>Planning</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="service-item">
+									<img src="./image/direction.png" alt="ディレクション Direction">
+									<p>Direction</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</nav><!-- /.service-nav -->
+			</article><!-- /#service /.service-container -->
+			
+			
+			<div class="contact-bg">
+			<article id="contact" class="contact-container">
+				<header>
+					<h2 class="title white">Contact</h2>
+					<div class="contact-text">
+						<p>お気軽にご相談ください。</p>
+					</div>
+					<div class="button">
+						<a href="./contact.html">Contact</a>
+					</div>
+				</header>
+			</article><!-- /#contact /.contact-container -->
+			</div><!-- contact-bg -->
+		</main>
+		
+		<footer>
+			<p><small>&copy;cresta.design all rights reserved</small></p>
+		</footer>
+		
+	</article><!-- /.main-container -->
 
-  <!-- font -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-</head>
-<body class="fadeout">
-  <div class="wrap">
-  <!-- ヘッダー
-  ------------------------ -->
-  <header id="header">
-    <div class="headerImg">
-
-      <div class="headerNav">
-        <p><a href="#header" class="navTitle white">Cresta Design</a></p>
-        <div class="nav">
-          <nav>
-            <ul>
-              <li><a href="#concept">Concept</a></li>
-              <li><a href="#service">Service</a></li>
-              <li><a href="#works">Works</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-        </div> <!--nav-->
-
-          <!-- ------------
-            レスポンシブ
-            -------------->
-
-            <div class="hamburgerMenu">
-              <span class="menu"></span>
-              </div>
-
-             
-      </div> <!--headerNav-->
-  
-          <!-- タイトル -->
-      <div class="title">
-  
-        <h1 class="headerTitle">Design for Smile.</h1>
-        <p class="headerSubTitle"><span class="white">快適なオフィスを</span><span class="white">デザインする</span></p>
-      </div>
-
-    </div>
-  </header>
-
-  <!-- コンセプト
-   -->
-  <section id="concept">
-    <div class="container concept">
-
-      <h2 class="conceptTitle side">CONCEPT <span class="bar"></span></h2>
-      <h3 class="subTitle">“働きたくなる空間”をデザインすることで<br>人々を幸せにする。</h3>
-      <div class="conceptContent">
-        <p>私たちは、オフィスに特化した空間デザイン専門としております。その理由は、「働きたくなる空間で仕事ができれば多くの人を幸せにできるのではないか」と考えるためです。そんな想いの株式会社Cresta Designだからこそできる空間デザインを提供させていただきます。</p>
-        <img src="img/concept-image@2x.jpg" alt="コンセプトイメージ">
-      </div> <!--conceptContent-->
-      <h4 class="thinTitle right">Our Concept</h4>
-    </div> <!--container-->
-  </section>
-
-  <section id="works">
-    <div class="container works">
-        <h2 class="worksTitle white end">Works <span class="bar"></span></h2>
-
-      <div class="worksContents">
-        <div class="works">
-          <img src="img/card-img01@2x.jpg" alt="ワーク画像１">
-          <p>新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
-        </div> <!--works1-->
-        <div class="works">
-          <img src="img/card-img02@2x.jpg" alt="ワーク画像２">
-          <p>新規サイトを公開しました。今回のサイトは白と黒を基調にした</p>
-        </div> <!--works2-->
-        <div class="works">
-          <img src="img/card-img03@2x.jpg" alt="ワーク画像３">
-          <p>新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
-        </div><!--works3-->
-      </div><!--worksContents-->
-        
-        <!--ボタン-->
-        <button><p><a href="#">View more</a></p></button>
-
-        <h4 class="thinTitle left white">Our Works</h4>
-    </div><!--container-->
-  </section>
-
-  <!-- サービス
-  ----------- -->
-  <section id="service">
-    <div class="container service">
-      <h2 class="serviceTitle side">Service <span class="bar"></span></h2>
-
-      <div class="serviceContents">
-        <div class="service">
-          <a href="#"><img src="img/service-img01@2x.jpg" alt="Hearing"></a>
-          <p class="centerPosition white">Hearing</p>
-        </div><!--service1-->
-        <div class="service">
-          <a href="#"><img src="img/service-img02@2x.jpg" alt="Planning"></a>
-          <p class="centerPosition white">Planning</p>
-        </div><!--service2-->
-        <div class="service">
-          <a href="#"><img src="img/sevice-img03@2x.jpg" alt="Direction"></a>
-          <p class="centerPosition white">Direction</p>
-        </div><!--service3-->
-      </div><!--serviceContents-->
-      <h4 class="thinTitle right">Our Service</h4>
-    </div><!--container-->
-  </section>
-
-  <!-- コンタクト
-  -------------- -->
-  <section id="contact">
-    <div class="container contact white">
-      <h2 class="contactTitle white end">Contact <span class="bar"></span></h2>
-
-      <p class="white">お気軽にご相談ください。</p>
-
-      <button><a href="contact.html">Contact</a></button>
-
-      <h4 class="thinTitle left white">Contact us</h4>
-    </div><!--container-->
-  </section>
-  
-  <!-- フッター
-  ------------- -->
-  <footer id="footer">
-    <p><small>&copy;cresta.design all rights reserved</small></p>
-  </footer>
-
-  <div class="hamburger">
-    <nav>
-      <ul>
-        <li><a href="#concept">Concept</a></li>
-        <li><a href="#service">Service</a></li>
-        <li><a href="#works">Works</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
 
 
-    <!-- jQuery -->
-    <script src="JS/jquery.min.js"></script>
-    <script src="JS/jquery.bgswitcher.js"></script>
-    <script src="JS/script.js"></script>
-
-  </div>
-</body>
+	<!-- JS -->
+	<script src="./JS/jquery.min.js"></script>
+	<script src="./JS/script.js"></script>
+	</body>
 </html>
+		
+
